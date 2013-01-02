@@ -1,0 +1,6 @@
+upload/
+.project
+.setting/
+application/config/config.php
+application/config/database.php
+captcha/*.jpg
