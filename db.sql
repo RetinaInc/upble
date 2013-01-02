@@ -74,19 +74,7 @@ CREATE TABLE `ci_sessions` (
 
 
 
---
---  `favorites`
---
 
-CREATE TABLE `favorites` (
-  `rid` int(11) NOT NULL DEFAULT '0',
-  `uid` int(11) NOT NULL DEFAULT '0',
-  `username` varchar(20) NOT NULL DEFAULT '',
-  `create_at` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`rid`,`uid`),
-  KEY `username` (`username`),
-  KEY `rid` (`rid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -262,31 +250,6 @@ CREATE TABLE `review` (
 
 -- --------------------------------------------------------
 
---
---  `tags`
---
-
-CREATE TABLE `tags` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) NOT NULL DEFAULT '',
-  `slug` varchar(200) NOT NULL DEFAULT '',
-  `count` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`),
-  UNIQUE KEY `slug` (`slug`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
---  `tag_relationships`
---
-
-CREATE TABLE `tag_relationships` (
-  `objectid` int(11) NOT NULL DEFAULT '0',
-  `tag_id` int(11) NOT NULL DEFAULT '0',
-  UNIQUE KEY `objectid` (`objectid`,`tag_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
