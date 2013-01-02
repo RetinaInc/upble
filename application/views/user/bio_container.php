@@ -20,7 +20,7 @@
    	<?php if($user_reviews = get_user_review_count($user->id)):?>
 	<li class="clearfix">
 		<div class="icon"><img title="<?=$user_reviews?> reviews" src="<?=site_url('images/reviews.gif')?>"/></div>
-		<div style="width:45px;overflow:hidden;float:left;"><a title="<?=$user_reviews?> reviews" href="<?=site_url('/mcp/'.$user->username.'/reviews')?>"><?=$user_reviews?></a></div>
+		<div style="width:45px;overflow:hidden;float:left;"><a title="<?=$user_reviews?> reviews" href="<?=site_url('member/'.$user->username.'/reviews')?>"><?=$user_reviews?></a></div>
 	</li>
 	<?php endif;?>
 	<?php  if($user_flowers =get_user_flowers($user->id)):?>

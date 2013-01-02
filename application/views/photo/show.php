@@ -32,7 +32,7 @@
 					<?php if($user_reviews = get_user_review_count($photo->uid)):?>
 					<div class="span-2 last" style="margin-top:4px;">
 						<div class="icon"><img title="<?=$user_reviews?> reviews" src="<?=site_url('images/reviews.gif')?>"/></div>
-						<div style="width:45px;overflow:hidden;float:left;"><a title="<?=$user_reviews?> reviews" href="<?=site_url('/mcp/'.$photo->username.'/reviews')?>"><?=$user_reviews?></a></div>
+						<div style="width:45px;overflow:hidden;float:left;"><a title="<?=$user_reviews?> reviews" href="<?=site_url('member/'.$photo->username.'/reviews')?>"><?=$user_reviews?></a></div>
 					</div>
 					<?php endif;?>
 					<?php $user_flowers =get_user_flowers($photo->uid);?>

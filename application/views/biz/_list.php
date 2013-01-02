@@ -18,7 +18,7 @@
 			<div class="bizinfo clear">
 				<p> Categories:&nbsp;<a href="<?=site_url('biz/c/'.$biz->city->slug.'/'.$biz->category_1->slug)?>"><?=$biz->category_1->name?></a><?php if($biz->category_2):?>,&nbsp;<a href="<?=site_url('biz/c/'.$biz->city->slug.'/'.$biz->category_2->slug)?>"><?=$biz->category_2->name?></a><?php endif;?></p>
 				<p><?=htmlspecialchars($biz->addrs1)?></p>
-				<p><?php if($biz->district):?><?=$biz->district->name?> District<?php endif?>, <?=$biz->city->name?></p>
+				<p><?php if($biz->district):?><?=$biz->district->name?><?php endif?>, <?=$biz->city->name?></p>
 				<p><?=$biz->tel?></p>
 				
 				
