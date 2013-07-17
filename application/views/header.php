@@ -5,6 +5,9 @@
 <head>
   <title><?php if(isset($heading)):?><?=$heading?><?php endif;?></title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <script type="text/javascript">
+      var HOME_URL = "<?php echo base_url();?>";
+  </script>
 
   <link rel="stylesheet" href="<?php echo base_url()?>css/screen.css" type="text/css" media="screen, projection" />
   <link rel="stylesheet" href="<?php echo base_url()?>css/print.css" type="text/css" media="print" />

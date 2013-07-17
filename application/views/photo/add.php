@@ -1,8 +1,8 @@
 <?php $this->load->view('header.php'); ?>
-<link href="/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
+<link href="<?php echo base_url()?>uploadify/uploadify.css" type="text/css" rel="stylesheet" />
 <div id="content">
 		<div id="top" class="clearfix">
-			<div class="span-10"><h1>Upload Photos: <a href="/biz/<?=$biz->id?>"><?=$biz->name?></a></h1></div>
+			<div class="span-10"><h1>Upload Photos: <a href="<?php echo base_url()?>biz/<?=$biz->id?>"><?=$biz->name?></a></h1></div>
 			
 		</div>
 		<div class="box last_box" id="uploader">
@@ -23,8 +23,8 @@
 </div>
 <div>
 </div>
-<script type="text/javascript" src="/uploadify/jquery.uploadify-3.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>uploadify/jquery.uploadify-3.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery.cookie.js"></script>
 <script type="text/javascript">
 
   $(document).ready(function() {
@@ -32,14 +32,14 @@
 	browser_cookie = $.cookie('<?=$this->session->sess_cookie_name?>');
 	$('#file_upload').uploadify({
 	  'uploader'  : '<?=site_url("/photo/uploadFile")?>',
-	  'swf'  : '/uploadify/uploadify.swf',
+	  'swf'  : '<?php echo base_url()?>uploadify/uploadify.swf',
 	  'formData':{'bizid':<?=$biz->id?>,'browser_cookie':browser_cookie},
       'buttonText'  : 'Upload Photos',
 	  'fileTypeExts'     : '*.jpg;',
 	  'fileTypeDesc'    : 'JPG Files',
-	  'cancelImg' : '/uploadify/cancel.png',
+	  'cancelImg' : '<?php echo base_url()?>uploadify/cancel.png',
 
-	  'folder'    : '/tmp',
+	  'folder'    : '<?php echo base_url()?>tmp',
 	  'multi'     : true,
       'queueSizeLimit' : 4,
 	  'auto'      : true,

@@ -165,12 +165,12 @@ var Login={
 		   return false;
 		}
 		
-		Utils.postAction('/ucp/login',$('#loginForm').serialize(),function(data){
+		Utils.postAction(HOME_URL+'ucp/login',$('#loginForm').serialize(),function(data){
 		
 		if(data==1)
 		{
 			$("#login_form").hide();
-			Utils.loadAction('#user','/ucp/userpanel');
+			Utils.loadAction('#user',HOME_URL+'ucp/userpanel');
 		}
 		});
 		return false;
@@ -206,7 +206,7 @@ var Login={
 		{
 			e.defaultValue=false;
 		}
-		Utils.loadAction('#user','/ucp/logout');
+		Utils.loadAction('#user',HOME_URL+'ucp/logout');
    }
    
    
@@ -342,21 +342,21 @@ $(function(){
 			var id = ids[2];
 			var type = ids[3];
 			
-			Utils.loadAction("#flower_holder_"+id,'/flower/send/'+bizid+'/'+id+'/'+type,{},function(){
+			Utils.loadAction("#flower_holder_"+id,HOME_URL+'flower/send/'+bizid+'/'+id+'/'+type,{},function(){
 				if($('#user_flower_'+uid).length>0)
 				{
 					if(!($('#user_flower_'+uid).hasClass('user_flower')))
 					{
 						$('#user_flower_'+uid).addClass('user_flower');
 					}
-					Utils.loadAction('#user_flower_'+uid,'/flower/user/'+uid);
+					Utils.loadAction('#user_flower_'+uid,HOME_URL+'flower/user/'+uid);
 				}
 			});
 	});
 	$('.required_login').click(function(event){
 		event.preventDefault();
 		var href= $(this).attr('href');
-		Utils.getAction("/ucp/is_logged_in",{},function(d){
+		Utils.getAction(HOME_URL+"ucp/is_logged_in",{},function(d){
 			if(d!=1)
 			{
 				login_require_box();
