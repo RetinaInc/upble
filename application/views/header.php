@@ -64,7 +64,7 @@
 		<div class="span-5" id="logo"><img src="<?php echo base_url()?>images/logo.png"/></div>
 		
 		<div class="span-12 search_box" >
-			<form id="searchbox" action="/biz/search" method="post">
+			<form id="searchbox" action="<?php echo base_url()?>biz/search" method="post">
 				<input type="text"  id='q' name='q' value="<?php if(isset($terms)):?><?=$terms?><?php elseif($this->tank_auth->get_user_city()):?>Search Business In <?=$this->tank_auth->get_user_city()->name?><?php endif;?>"><button id="s_submit">GO</button>
 			</form>
 			
