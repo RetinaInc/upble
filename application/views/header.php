@@ -6,22 +6,22 @@
   <title><?php if(isset($heading)):?><?=$heading?><?php endif;?></title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
+  <link rel="stylesheet" href="<?php echo base_url()?>css/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="<?php echo base_url()?>css/print.css" type="text/css" media="print" />
   <!--[if IE]>
-    <link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="<?php echo base_url()?>css/ie.css" type="text/css" media="screen, projection" />
   <![endif]-->
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
-   <link rel="stylesheet" href="/css/colorbox.css" type="text/css" />
-  <script src="/js/jquery.js"></script>
-  <script src="/js/jquery.colorbox-min.js"></script>
-  <script src="/js/common.js"></script>
+  <link rel="stylesheet" href="<?php echo base_url()?>css/style.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="<?php echo base_url()?>css/colorbox.css" type="text/css" />
+  <script src="<?php echo base_url()?>js/jquery.js"></script>
+  <script src="<?php echo base_url()?>js/jquery.colorbox-min.js"></script>
+  <script src="<?php echo base_url()?>js/common.js"></script>
   
   
 </head>
 
 <body>
-	<div id="loading" style="display:none;"><img width='32' height='32' src="/images/loading.gif"></div>
+	<div id="loading" style="display:none;"><img width='32' height='32' src="<?php echo base_url()?>images/loading.gif"></div>
 	<div id="prfs" >
 		<div id="user_nav" class="container" >
 			<div class="span-3" style="color:#9999CC;">
@@ -58,7 +58,7 @@
 	
 	<div id="header" class="container">
 		
-		<div class="span-5" id="logo"><img src="/images/logo.png"/></div>
+		<div class="span-5" id="logo"><img src="<?php echo base_url()?>images/logo.png"/></div>
 		
 		<div class="span-12 search_box" >
 			<form id="searchbox" action="/biz/search" method="post">
@@ -69,7 +69,7 @@
 		<div  class="add_btm"><a <?php if(!$this->tank_auth->is_logged_in()):?>class="required_login"<?php endif;?> href="<?=site_url('biz/add')?>">Add A Business</a></div>
 		<div class="clear"></div>
 		<div id="nav" class="container">
-			<a href="/">Home</a>
+			<a href="<?php echo base_url()?>">Home</a>
 			<?php 
 				$cates = $this->tank_auth->get_categories();
 				if($this->tank_auth->get_user_city() && $cates):
